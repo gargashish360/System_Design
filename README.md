@@ -11,3 +11,4 @@ Important points:
 * Proxies: Mainly two types, forward proxy and reverse proxy.
 * Forward proxy is a kind of server that sits between the clients or set of clients and another server. When the server responds it will give it response back to forward proxy which in turn will respond to the client. In this case the client identity is hidden from the server, for instance the VPN use-case.
 * Reverse proxy hides the identity of server from client.
+* There are multiple clients and servers, in order to use the functionality of caching we can associate 1 client to 1 server, hence it can be acheived by doing caching.
