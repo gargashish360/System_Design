@@ -17,7 +17,7 @@ Important points:
 * Postgres is a popular relational database.
 * SQL helps to perform querying directly into the database, without the need to load data in memory.
 * SQL uses ACID transactions:
-  --> A: Atomiticity.
-  --> C: Consistency.
-  --> I: Isolation.
-  --> D: Durability.
+  --> A: Atomiticity: If a transaction consist of multiple operations like deducting funds from 1 account and putting it into another, than make sure if one suboperation       fails they all fail.
+  --> C: Consistency: Any transaction in database will abide by all rules in that database. Any future transaction in database will take into account any past  transaction.
+  --> I: Isolation: Multiple transactions can occur at same time, but they will be executed as if they are put in a queue.
+  --> D: Durability: The transaction if happened is quite permanent.
