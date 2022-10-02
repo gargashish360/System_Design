@@ -11,4 +11,13 @@ Important points:
 * Proxies: Mainly two types, forward proxy and reverse proxy.
 * Forward proxy is a kind of server that sits between the clients or set of clients and another server. When the server responds it will give it response back to forward proxy which in turn will respond to the client. In this case the client identity is hidden from the server, for instance the VPN use-case.
 * Reverse proxy hides the identity of server from client.
-* There are multiple clients and servers, in order to use the functionality of caching we can associate 1 client to 1 server, hence it can be acheived by doing caching.
+* There are multiple clients and servers, in order to use the functionality of hashing we can associate 1 client to 1 server, hence it can be acheived by doing hashing.
+* Relational Databases imposes tabular like structure over the data stored.
+* There are some very powerful queries that can be performed over relational databases. That's why they are chosen many times over a non-relational database.
+* Postgres is a popular relational database.
+* SQL helps to perform querying directly into the database, without the need to load data in memory.
+* SQL uses ACID transactions:
+  --> A: Atomiticity.
+  --> C: Consistency.
+  --> I: Isolation.
+  --> D: Durability.
