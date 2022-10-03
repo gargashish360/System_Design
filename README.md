@@ -16,6 +16,11 @@ Important points:
 * There are some very powerful queries that can be performed over relational databases. That's why they are chosen many times over a non-relational database.
 * Postgres is a popular relational database.
 * SQL helps to perform querying directly into the database, without the need to load data in memory.
+* To select servers start with round robin order, starting from server A, B, C and then D.
+* One should use caching strategy over the servers to store the information to process.
+* Hash the client name/numbers to some respective server.
+Two reliable hashing strategies are consistent hashing and rendezvous hashing.
+--> Consistent Hashing: If we put servers and clients in a circle, if a server dies or a new server is added only few of them are affected.
 * SQL uses ACID transactions:
   --> A: Atomiticity: If a transaction consist of multiple operations like deducting funds from 1 account and putting it into another, than make sure if one suboperation       fails they all fail.
   --> C: Consistency: Any transaction in database will abide by all rules in that database. Any future transaction in database will take into account any past  transaction.
