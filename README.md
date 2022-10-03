@@ -21,8 +21,12 @@ Important points:
 * Hash the client name/numbers to some respective server.
 Two reliable hashing strategies are consistent hashing and rendezvous hashing.
 --> Consistent Hashing: If we put servers and clients in a circle, if a server dies or a new server is added only few of them are affected.
+* We can also perform multiple hashing in a way that, one server can be located on multiple locations on circle, after passing through multiple hashing functions(Maybe if the server is powerful, it can be placed over multiple locations).
+--> Rendezvous hashing: 
 * SQL uses ACID transactions:
   --> A: Atomiticity: If a transaction consist of multiple operations like deducting funds from 1 account and putting it into another, than make sure if one suboperation       fails they all fail.
   --> C: Consistency: Any transaction in database will abide by all rules in that database. Any future transaction in database will take into account any past  transaction.
   --> I: Isolation: Multiple transactions can occur at same time, but they will be executed as if they are put in a queue.
   --> D: Durability: The transaction if happened is quite permanent.
+  * Creating indexes in a database, helps to make operations fast.
+  
