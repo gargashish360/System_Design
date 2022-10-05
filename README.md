@@ -29,4 +29,11 @@ Two reliable hashing strategies are consistent hashing and rendezvous hashing.
   --> I: Isolation: Multiple transactions can occur at same time, but they will be executed as if they are put in a queue.
   --> D: Durability: The transaction if happened is quite permanent.
   * Creating indexes in a database, helps to make operations fast.
-  
+  * Key-value store database(A commonly used no-sql database):
+    --> Flexible in a way, doesn't have any imposed structure.
+    --> Simple.
+    --> Ex: DynamoDb, Redis etc.
+    --> There are the chances that when system goes down, such database will be removed automatically.
+ * Specialized storage paradigms:
+   --> Blob: Binary large objects. Blob in system design perspective means the arbitary piece of unstructured data. A video file, image file, a large text    file. Blob doesn't fit into a SQL database. GCS and S3 are blob storages.
+   --> Time-Series Data: Influx, Prometheus
