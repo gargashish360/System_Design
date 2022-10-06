@@ -36,4 +36,10 @@ Two reliable hashing strategies are consistent hashing and rendezvous hashing.
     --> There are the chances that when system goes down, such database will be removed automatically.
  * Specialized storage paradigms:
    --> Blob: Binary large objects. Blob in system design perspective means the arbitary piece of unstructured data. A video file, image file, a large text    file. Blob doesn't fit into a SQL database. GCS and S3 are blob storages.
-   --> Time-Series Data: Influx, Prometheus
+   --> Time-Series Data: Influx, Prometheus.
+   --> Graph Database.
+   --> Spatial Database: quadtree.
+   --> Quadtree: Every node has 0 children nodes or atleast 4 children nodes.
+* Key-value stores database is good, as they help to access data very quickly.
+
+   
