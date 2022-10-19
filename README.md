@@ -41,5 +41,11 @@ Two reliable hashing strategies are consistent hashing and rendezvous hashing.
    --> Spatial Database: quadtree.
    --> Quadtree: Every node has 0 children nodes or atleast 4 children nodes.
 * Key-value stores database is good, as they help to access data very quickly.
-
-   
+* Replication and Sharding:
+--> Main database is synced up with replica: Hence in this case the write operation will take fairly long time, as operations are need to be updated both on main database and replica.
+--> For instance, if servers are placed in India(Original) and USA(Replica). An indian user, if updates anything will get its update instantaneously whereas replication can be done asynchronously with USA server let's say every 5 min or 10 min etc.
+--> Horizontal Scaling: For Ex, having multiple database servers. 
+--> Sharding: Split up the main data into multiple parts, and store each part on the different database server. For Ex, any payment coming from customer whose name start with A-B will store in database server 1, any customer whose name start with C-D will be stored in database server 2 etc. 
+* We can use hashing to select which shard to use, based on the character no.
+* Leader Election: Third-Party Service --> Database: If there are many services, doing the same task, then the leader is selected among them to not repeat the task. 
+                   --> Zookeeper and Etcd are two tools, that can be used for leader election.
