@@ -1,15 +1,17 @@
-# System_Design
+# System_Design:
 
-Important points:
-* When designing the system take care about the availability, latency and throughput.
-* Hard-core optimization is needed for transfer of data over the network.
+* When designing the system take care about three dimensions:
+  --> Availability.
+  --> Latency.
+  --> Throughput.
+* Hard-core optimization is needed to transfer the data over the network.
 * Availability is measured in terms of nines. 99.9% means 3 nines of system availability.
-* Try to apply redundancy within the system, if the traffic need to be diverted try to have multiple load balancers and multiple servers to receive the request.
+* Redundancy is important, if the traffic need to be diverted try to have multiple load balancers and multiple servers to receive the request.
 * Caching is important when we want to increase the speed within client-server model.
-* Caches can become stale, if they haven't updated properly. So make sure in a way to store them such that user dont see any outdated information.
+* Cache can become stale, if they haven't updated properly. So make sure in a way to store them such that user dont see any outdated information.
 * LRU policy: You get rid of least recently used data in the cache. This type of data we dont care about much.
 * Proxies: Mainly two types, forward proxy and reverse proxy.
-* Forward proxy is a kind of server that sits between the clients or set of clients and another server. When the server responds it will give it response back to forward proxy which in turn will respond to the client. In this case the client identity is hidden from the server, for instance the VPN use-case.
+* Forward proxy is a kind of server that sits between the clients or set of clients and another server. When the server responds it will give it response back to     forward proxy which in turn will respond to the client. In this case the client identity is hidden from the server, for instance the VPN use-case
 * Reverse proxy hides the identity of server from client.
 * There are multiple clients and servers, in order to use the functionality of hashing we can associate 1 client to 1 server, hence it can be acheived by doing hashing.
 * Relational Databases imposes tabular like structure over the data stored.
@@ -19,10 +21,7 @@ Important points:
 * To select servers start with round robin order, starting from server A, B, C and then D.
 * One should use caching strategy over the servers to store the information to process.
 * Hash the client name/numbers to some respective server.
-Two reliable hashing strategies are consistent hashing and rendezvous hashing.
---> Consistent Hashing: If we put servers and clients in a circle, if a server dies or a new server is added only few of them are affected.
-* We can also perform multiple hashing in a way that, one server can be located on multiple locations on circle, after passing through multiple hashing functions(Maybe if the server is powerful, it can be placed over multiple locations).
---> Rendezvous hashing: 
+Two reliable hashing strategies are consistent and rendezvous hashing.
 * SQL uses ACID transactions:
   --> A: Atomiticity: If a transaction consist of multiple operations like deducting funds from 1 account and putting it into another, than make sure if one suboperation       fails they all fail.
   --> C: Consistency: Any transaction in database will abide by all rules in that database. Any future transaction in database will take into account any past  transaction.
@@ -48,4 +47,9 @@ Two reliable hashing strategies are consistent hashing and rendezvous hashing.
 --> Sharding: Split up the main data into multiple parts, and store each part on the different database server. For Ex, any payment coming from customer whose name start with A-B will store in database server 1, any customer whose name start with C-D will be stored in database server 2 etc. 
 * We can use hashing to select which shard to use, based on the character no.
 * Leader Election: Third-Party Service --> Database: If there are many services, doing the same task, then the leader is selected among them to not repeat the task. 
-                   --> Zookeeper and Etcd are two tools, that can be used for leader election.
+                   --> Zookeeper and Etcd are two tools, that can be used for leader election(They internally implement consensus algorithm).
+                   --> Etcd is a key-value store. It is highly available and strongly consistent. Etcd implement Raft consistent algorithm. It follows the leader,                            follower algorithm to perform the election.
+* Peer-To-Peer Networks: Helps to share files fast, like in torrent. Every node is a giver and each one of them is a taker. There is a distributed, which holds the info that what peer holds which information.
+
+                   
+                   
