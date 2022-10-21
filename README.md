@@ -50,6 +50,10 @@ Two reliable hashing strategies are consistent and rendezvous hashing.
                    --> Zookeeper and Etcd are two tools, that can be used for leader election(They internally implement consensus algorithm).
                    --> Etcd is a key-value store. It is highly available and strongly consistent. Etcd implement Raft consistent algorithm. It follows the leader,                            follower algorithm to perform the election.
 * Peer-To-Peer Networks: Helps to share files fast, like in torrent. Every node is a giver and each one of them is a taker. There is a distributed, which holds the info that what peer holds which information.
+Polling and Streaming: This is a technique using which clients are always kept updated of the server values.
+Polling: The client issues request for data that it want on recurring basis, following the set interval. For Ex: Every 2 sec etc. For Ex, if client want to get updated of outside temperature every 2 sec that is stored in server.
+Streaming: For instance, if we are dealing with messages and want to see the message instantly, in such case polling will not help and we need to use streaming. The client here will open the long-lived connection. Here, the client is streaming data from the server.
+Configuration: A configuration is a set of parameters or constants, that our system is going to use. It can be dynamic or static. Dynamic means that changes are reflected instantaneously.
 
                    
                    
