@@ -5,7 +5,7 @@
   --> Latency.
   --> Throughput. **
   
-"*" Hard-core optimization is needed to transfer data over network.
+* Hard-core optimization is needed to transfer data over network.
 "*" Availability is measured in terms of nines. 99.9% states 3 nines of system availability.
 "*" Redundancy is important in system design, if the traffic need to be diverted try to have multiple load balancers and multiple servers to receive the request.
 "*" Caching is important when we want to increase the speed within client-server model.
