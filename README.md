@@ -58,7 +58,11 @@ When designing the system take care about three dimensions:\
 * Polling: The client issues request for data that it want on recurring basis, following the set interval. For Ex: Every 2 sec etc. For Ex, if client want to get\               updated of outside temperature every 2 sec that is stored in server.\
 * Streaming: For instance, if we are dealing with messages and want to see the message instantly, in such case polling will not help and we need to use streaming.\
              The client here will open the long-lived connection. Here, the client is streaming data from the server.
-Configuration: A configuration is a set of parameters or constants, that our system is going to use. It can be dynamic or static. Dynamic means that changes are                    reflected instantaneously.
+* Configuration: A configuration is a set of parameters or constants, that our system is going to use. It can be dynamic or static. Dynamic means that changes are                    reflected instantaneously.
+* Logging and Monitoring shoule be incprporated to manage the system.
 
-                   
+* Publish/Subscribe pattern: Publisher(Server) and subscriber(Client) they communicate with each other via a topic. Server pushes a data to a topic and client
+                 access the data from a topic.
+
+
                    
