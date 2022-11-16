@@ -1,9 +1,9 @@
 # System_Design Fundamentals:
 
-**When designing the system take care about three dimensions:
-  --> Availability.
-  --> Latency.
-  --> Throughput.**
+**When designing the system take care about three dimensions:\
+  --> Availability.\
+  --> Latency.\
+  --> Throughput.\**
   
 * Hard-core optimization is needed to transfer data over network.
 * Availability is measured in terms of nines. 99.9% states 3 nines of system availability.
