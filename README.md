@@ -62,7 +62,8 @@ When designing the system take care about three dimensions:\
 * Logging and Monitoring shoule be incprporated to manage the system.
 
 * Publish/Subscribe pattern: Publisher(Server) and subscriber(Client) they communicate with each other via a topic. Server pushes a data to a topic and client
-                 access the data from a topic.
+                 access the data from a topic. 
+                 * Whenever the publisher publishes the message, it is guarranteed that subscriber will receive it atleast once.
 
 
                    
