@@ -31,6 +31,10 @@ When designing the system take care about three dimensions:\
 * Publish/Subscribe pattern: Publisher(Server) and subscriber(Client) they communicate with each other via a topic. Server pushes a data to a topic and client
                  access the data from a topic. 
                  * Whenever the publisher publishes the message, it is guarranteed that subscriber will receive it atleast once.
+                 * Subscriber send ack to the topic regarding that particular message is received.
+                 * Suppose if subscriber looses connection while sending ack. Then same messgase will be delivered again. Hence the concept of Idempotency is very
+                   crucial here i.e even if multiple transactions happen values at server side doesn't change.
+                 * Google Cloud offers different topics and their storage solution, that have the capability to scale automatically.
 
 
                    
