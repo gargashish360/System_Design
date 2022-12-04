@@ -1,6 +1,5 @@
 #Map-Reduce:
 
-Why it is needed?
 * When we have very large datasets, it is important to process them in parallel. Hence, at this point this concept comes into play.
 * The Map part divides the data to be processed in parallel, and make up key-value pairs. These are intermediate key-value pairs.
   For Example:
